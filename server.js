@@ -21,4 +21,9 @@ app.get("/https/:url", (req,res) => {
         }
     });
 });
+app.get("/gamejoin/",(req,res) =>{
+    axios.get("https://www.roblox.com/games/getgameinstancesjson?placeId=286090429&startindex=0").then(function (data) {
+            console.log(data.data)
+    })
+})
 app.listen(process.env.PORT || 5000);
